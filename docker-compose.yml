@@ -1,0 +1,13 @@
+version: '3'
+services:
+  redis:
+    container_name: redis-jenkins
+    image: redis:5.0
+    ports:
+      - "6379:6379"
+    command: redis-server
+    environment:
+      - TZ=Asia/Shanghai
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+        
